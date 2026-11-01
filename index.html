@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>The Product Design Course</title>
+<meta name="description" content="A 21-guide course in product design for the solo software creator: principles, craft, practice and product breakdowns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/course.css">
+<style>
+.opening h1{font-size:clamp(40px,5.2vw,62px)}
+.hub-track{margin-top:8px}
+.hub-track .card .n{display:flex;justify-content:space-between;gap:8px}
+.hub-total{font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:14px}
+.hub-total b{color:var(--ink);font-variant-numeric:tabular-nums}
+.hub-week{width:100%;border-collapse:collapse;font-size:15.5px;min-width:560px}
+.place label{display:grid;grid-template-columns:26px 1fr;gap:6px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:16.5px;cursor:pointer}
+.place input{width:18px;height:18px;margin-top:4px;accent-color:var(--ink)}
+.place-out{margin-top:14px;font-family:var(--sans);font-size:15px;background:var(--panel);border-radius:12px;padding:14px 16px}
+.place-out b{font-weight:600}
+</style>
+</head>
+<body data-guide="index">
+<div class="wrap">
+<nav class="rail" aria-label="Contents"></nav>
+<main>
+<details class="mobile-nav"></details>
+
+<header class="opening">
+  <h1>The Product Design Course. <span class="soft">For people who make software alone.</span></h1>
+  <p class="lede">Twenty-one guides that take you from "I build apps" to "I design products people love using." Principles from the masters, the craft in detail, a practice you can run every week, and teardowns of the products worth studying, from Braun radios and MUJI to iA Writer and the Kindle.</p>
+  <div class="meta-grid">
+    <div><b>Guides</b>21, plus this hub</div>
+    <div><b>Plan</b>24 weeks at 6–8 hours a week</div>
+    <div><b>Format</b>Read, try the demos, answer, practise</div>
+    <div><b>Your progress</b><span data-total>Saved in this browser</span></div>
+  </div>
+  <div class="objectives"><h3>By the end of the course you will be able to</h3><ul>
+    <li>Find a problem worth solving, and describe it so clearly that the design almost follows.</li>
+    <li>Structure a product: its objects, navigation, flows, states and words.</li>
+    <li>Make it look and feel right: hierarchy, type, colour, spacing, motion.</li>
+    <li>Make it work for everyone: accessible, honest, calm, fast.</li>
+    <li>Test it alone, learn from real use, and improve it on purpose.</li>
+    <li>Look at any product, physical or digital, and explain why it works.</li>
+    <li>Ship a complete product you designed end to end, and judge it against a professional rubric.</li>
+  </ul></div>
+</header>
+
+<article class="chapter" id="how" data-toc="How this course works">
+  <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em">How this course works</h2>
+  <p class="core">You don't become a designer by reading. You become one by making many small decisions, seeing what they do, and getting a little better each week. The guides are built around that loop.</p>
+  <figure class="diagram wide"><svg viewBox="0 0 860 210" role="img" aria-label="The learning loop: read, try, check, practise, apply, review">
+    <rect x="0.5" y="0.5" width="859" height="209" rx="14" class="f-panel s-rule"/>
+    <g font-size="13">
+      <rect x="24" y="70" width="112" height="64" rx="10" class="f-paper s-rule"/><text x="80" y="98" text-anchor="middle" font-weight="600" class="f-ink">1 Read</text><text x="80" y="116" text-anchor="middle" font-size="10.5" class="f-mut">the idea and why</text>
+      <rect x="160" y="70" width="112" height="64" rx="10" class="f-paper s-rule"/><text x="216" y="98" text-anchor="middle" font-weight="600" class="f-ink">2 Try</text><text x="216" y="116" text-anchor="middle" font-size="10.5" class="f-mut">the live demos</text>
+      <rect x="296" y="70" width="112" height="64" rx="10" class="f-paper s-rule"/><text x="352" y="98" text-anchor="middle" font-weight="600" class="f-ink">3 Check</text><text x="352" y="116" text-anchor="middle" font-size="10.5" class="f-mut">answer the quiz</text>
+      <rect x="432" y="70" width="112" height="64" rx="10" class="f-paper s-rule"/><text x="488" y="98" text-anchor="middle" font-weight="600" class="f-ink">4 Practise</text><text x="488" y="116" text-anchor="middle" font-size="10.5" class="f-mut">do the exercise</text>
+      <rect x="568" y="70" width="112" height="64" rx="10" class="f-sig"/><text x="624" y="98" text-anchor="middle" font-weight="600" class="f-sigink">5 Apply</text><text x="624" y="116" text-anchor="middle" font-size="10.5" class="f-sigink">to your product</text>
+      <rect x="704" y="70" width="132" height="64" rx="10" class="f-ink"/><text x="770" y="98" text-anchor="middle" font-weight="600" class="f-paper">6 Review</text><text x="770" y="116" text-anchor="middle" font-size="10.5" class="f-paper">weekly redesign</text>
+    </g>
+    <g class="s-mut" stroke-width="1.5" fill="none"><path d="M136 102h20M272 102h20M408 102h20M544 102h20M680 102h20" class="f-none"/></g>
+    <path d="M770 134 C770 186, 80 186, 80 138" class="f-none s-mut" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <text x="430" y="196" text-anchor="middle" font-size="11" class="f-mut">Spaced review: every part ends with recall questions that reach back to earlier guides</text>
+    <text x="24" y="40" font-size="15" font-weight="600" class="f-ink">The loop inside every chapter</text>
+  </svg><figcaption><b>Every chapter follows the same six steps.</b> Steps 1 to 4 happen in the guide. Steps 5 and 6 happen in your own product, which is where the learning sticks.</figcaption></figure>
+  <h3 class="sub">What you'll find in every guide</h3>
+  <div class="table-wrap"><table class="t"><thead><tr><th>Part of a chapter</th><th>What it's for</th></tr></thead><tbody>
+    <tr><td>Core idea</td><td>The one sentence to remember. If you forget everything else, keep this.</td></tr>
+    <tr><td>Diagrams and pictures</td><td>Drawn do and don't comparisons, annotated screens and objects. Most ideas are easier to see than to read.</td></tr>
+    <tr><td>Live demos</td><td>Flip between Without and With, drag sliders, type into forms. Feel the difference instead of taking it on trust.</td></tr>
+    <tr><td>In the wild</td><td>Real products that use (or break) the idea, so you can go and look.</td></tr>
+    <tr><td>Common mistakes</td><td>What goes wrong, why it happens, and the fix.</td></tr>
+    <tr><td>Check yourself</td><td>Scenario questions. They test whether you can use the idea, not whether you remember it.</td></tr>
+    <tr><td>Exercise</td><td>A timed task with a clear "done" and a three-level rubric to judge yourself honestly.</td></tr>
+    <tr><td>Checklists</td><td>Run them against your own product. Ticks are saved in your browser.</td></tr>
+    <tr><td>Wrap-up</td><td>Takeaways, an "I can…" self-assessment, a two-week practice assignment and what to read next.</td></tr>
+  </tbody></table></div>
+  <div class="callout solo"><div class="k">For the solo creator</div><p>Everything here assumes you are the researcher, designer, engineer, writer and support desk. There are no stakeholder workshops or hand-off documents. Where the classic advice assumes a team, the guides say what to do instead when it's just you.</p></div>
+</article>
+
+<article class="chapter" id="guides" data-toc="The 21 guides">
+  <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em">The 21 guides</h2>
+  <p>The order is deliberate: why before how, structure before surface, making before judging. The breakdowns can be read any time, and the reference library is for looking things up. Progress bars fill as you mark chapters complete.</p>
+  <div class="hub-total">Overall: <b data-overall>0</b> chapters complete</div>
+  <h3 class="sub">Track 1 · Think like a designer</h3>
+  <div class="cards hub-track" data-track="0,1,2"></div>
+  <h3 class="sub">Track 2 · The craft</h3>
+  <div class="cards hub-track" data-track="3,4,5,6,7,8"></div>
+  <h3 class="sub">Track 3 · Quality and scale</h3>
+  <div class="cards hub-track" data-track="9,10,11"></div>
+  <h3 class="sub">Track 4 · Modern products</h3>
+  <div class="cards hub-track" data-track="12,13"></div>
+  <h3 class="sub">Track 5 · Judgment and practice</h3>
+  <div class="cards hub-track" data-track="14,15,16"></div>
+  <h3 class="sub">Track 6 · Product breakdowns</h3>
+  <div class="cards hub-track" data-track="17,18,19"></div>
+  <h3 class="sub">Track 7 · Reference</h3>
+  <div class="cards hub-track" data-track="20"></div>
+</article>
+
+<article class="chapter" id="start" data-toc="Where to start">
+  <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em">Where should you start?</h2>
+  <p>Tick what is already true for you. The suggestion updates as you go. If you're unsure, start at Guide 1: it's short on jargon and sets up the vocabulary every other guide uses.</p>
+  <div class="place" id="place">
+    <label><input type="checkbox" data-skip="0"><span>I can explain affordances, signifiers, mapping, feedback and conceptual models with examples from apps I use.</span></label>
+    <label><input type="checkbox" data-skip="1"><span>I know Fitts's and Hick's laws, and when they don't apply.</span></label>
+    <label><input type="checkbox" data-skip="2"><span>I have interviewed at least five potential users and written a problem statement and job stories.</span></label>
+    <label><input type="checkbox" data-skip="3"><span>I design every screen's empty, loading, error and partial states before I build it.</span></label>
+    <label><input type="checkbox" data-skip="4"><span>I use a spacing scale and a deliberate colour palette, and I can fix hierarchy on a messy screen.</span></label>
+    <label><input type="checkbox" data-skip="5"><span>I choose type sizes from a scale and keep body text at 45–75 characters per line.</span></label>
+  </div>
+  <div class="place-out" id="place-out" role="status">Start with <b><a href="01-foundations.html">Guide 1 · Foundations</a></b>.</div>
+</article>
+
+<article class="chapter" id="plan" data-toc="The 24-week plan">
+  <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em">The 24-week plan</h2>
+  <p class="core">About six to eight hours a week: two or three reading sessions, one practice block, and the weekly redesign. Run the capstone project alongside from week 6.</p>
+  <div class="table-wrap"><table class="t hub-week"><thead><tr><th>Weeks</th><th>Read</th><th>Practise</th><th>Capstone milestone</th></tr></thead><tbody>
+    <tr><td>1–2</td><td><a href="01-foundations.html">Foundations</a></td><td>Annotate 3 apps you use daily with Norman's vocabulary. Start a swipe file.</td><td>Pick three candidate problems from your own life.</td></tr>
+    <tr><td>3</td><td><a href="02-mind.html">The Human Mind</a></td><td>Find one example of each UX law in the wild.</td><td>Note the habits and mental models your users already have.</td></tr>
+    <tr><td>4–5</td><td><a href="03-problems.html">Problems Worth Solving</a></td><td>Five interviews, job stories, an opportunity tree.</td><td>Problem brief and product principles.</td></tr>
+    <tr><td>6–7</td><td><a href="04-interaction.html">Structure &amp; Interaction</a></td><td>Object map, flows, every screen state for one feature.</td><td>Information architecture and core flow in sketches.</td></tr>
+    <tr><td>8</td><td><a href="05-visual.html">Visual Design</a></td><td>Tidy three messy screens. Build a spacing and colour system.</td><td>Wireframes to first visual pass.</td></tr>
+    <tr><td>9</td><td><a href="06-typography.html">Typography</a></td><td>Set one article perfectly. Build a type scale.</td><td>Type system for the capstone.</td></tr>
+    <tr><td>10</td><td><a href="07-reading-writing.html">Reading &amp; Writing</a></td><td>Design a reader settings panel. Write in focus mode for a week.</td><td>The main content surface, polished.</td></tr>
+    <tr><td>11</td><td><a href="08-motion.html">Motion &amp; Feel</a></td><td>Animate three transitions with specs.</td><td>Feedback and transitions.</td></tr>
+    <tr><td>12</td><td><a href="09-words.html">Words</a></td><td>Rewrite every string in one app. Voice chart.</td><td>Copy pass on the capstone.</td></tr>
+    <tr><td>13</td><td><a href="10-accessibility.html">Accessible &amp; Inclusive</a></td><td>Keyboard-only and screen-reader pass on your product.</td><td>Accessibility pass.</td></tr>
+    <tr><td>14</td><td><a href="11-data.html">Information &amp; Data</a></td><td>Redraw two charts and one table.</td><td>Stats or history screen, if it has one.</td></tr>
+    <tr><td>15</td><td><a href="12-systems.html">Systems &amp; Platforms</a></td><td>Tokens and a dozen components, documented.</td><td>Design system extracted from the capstone.</td></tr>
+    <tr><td>16</td><td><a href="13-ai.html">Designing with AI</a></td><td>Design one AI feature with preview, undo and sources.</td><td>Decide whether AI belongs in it at all.</td></tr>
+    <tr><td>17–18</td><td><a href="15-testing.html">Testing &amp; Iteration</a></td><td>Five usability tests and a heuristic review.</td><td>Test, fix the top five problems.</td></tr>
+    <tr><td>19</td><td><a href="16-ethics-calm.html">Honest &amp; Calm</a></td><td>Audit one app for dark patterns. Write your notification policy.</td><td>Ethics and trust checklist.</td></tr>
+    <tr><td>20</td><td><a href="14-brand-launch.html">Identity &amp; Launch</a></td><td>Name, icon sketches, landing page wireframe.</td><td>Landing page and app icon.</td></tr>
+    <tr><td>21–22</td><td><a href="18-breakdowns-objects.html">Objects</a>, <a href="19-breakdowns-software.html">Software</a>, <a href="20-breakdowns-reading.html">Reading</a></td><td>Write two teardowns of your own.</td><td>Steal three lessons into the capstone.</td></tr>
+    <tr><td>23–24</td><td><a href="17-practice.html">The Solo Practice</a></td><td>Self-assessment matrix, your ongoing routine.</td><td>Ship it. Write the case study. Score it against the rubric.</td></tr>
+  </tbody></table></div>
+  <p class="note">The full week-by-week plan, the daily drills and the capstone rubric are in <a href="17-practice.html">Guide 17 · The Solo Practice</a>. Use <a href="21-reference.html">the Reference Library</a> throughout.</p>
+  <div class="cklist" data-key="habits">
+    <div class="ck-head"><h4>The habits that make it work</h4><span class="ck-count"></span></div>
+    <label><input type="checkbox"><span>I study one product for 15 minutes a day and write down one decision its designer made.</span></label>
+    <label><input type="checkbox"><span>I do one weekly redesign of a screen I use, and keep the before and after.</span></label>
+    <label><input type="checkbox"><span>I apply each chapter to my own product within a week of reading it.</span></label>
+    <label><input type="checkbox"><span>I answer the quiz before reading the explanation, even when I'm unsure.</span></label>
+    <label><input type="checkbox"><span>I score my exercises with the rubric honestly, and redo the ones I rate "Beginner".</span></label>
+    <label><input type="checkbox"><span>I put my work in front of a real user at least once a month.</span></label>
+  </div>
+</article>
+
+<article class="chapter" id="teachers" data-toc="Who teaches you">
+  <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.02em">Who teaches you</h2>
+  <p>The first field guide had eleven teachers. This course has more than fifty, from cognitive scientists to type designers to people who built famous apps by themselves. You'll meet them in the chapters where their ideas matter, and they're all collected in <a href="21-reference.html">the Reference Library</a>.</p>
+  <div class="table-wrap"><table class="t"><thead><tr><th>Area</th><th>Some of the teachers</th></tr></thead><tbody>
+    <tr><td>Understanding people</td><td>Don Norman, Jakob Nielsen, Steve Krug, Alan Cooper, Jef Raskin, Daniel Kahneman, Kathy Sierra</td></tr>
+    <tr><td>Problems and products</td><td>Clayton Christensen, Bob Moesta, Rob Fitzpatrick, Teresa Torres, April Dunford, Ryan Singer</td></tr>
+    <tr><td>Objects and restraint</td><td>Dieter Rams, Naoto Fukasawa, Kenya Hara, Jasper Morrison, Gunpei Yokoi, Charles and Ray Eames</td></tr>
+    <tr><td>Type and layout</td><td>Massimo Vignelli, Josef Müller-Brockmann, Robert Bringhurst, Matthew Butterick, Ellen Lupton, Oliver Reichenstein</td></tr>
+    <tr><td>Software craft</td><td>Bret Victor, Susan Kare, Bill Atkinson, Bas Ording, Loren Brichter, Mike Matas, Silvio Rizzi, Marco Arment</td></tr>
+    <tr><td>Information</td><td>Edward Tufte, Jacques Bertin, Stephen Few, Alberto Cairo</td></tr>
+    <tr><td>Ethics and calm</td><td>Mark Weiser, Amber Case, Harry Brignull, Mike Monteiro, Ink &amp; Switch</td></tr>
+  </tbody></table></div>
+</article>
+
+<footer>The Product Design Course. Progress, checklists and theme are saved only in this browser.</footer>
+</main>
+</div>
+<script src="assets/course.js"></script>
+<script>
+(function(){
+  var C=window.PDC_COURSE||[];
+  function sum(stem){try{return JSON.parse(localStorage.getItem('pdc-summary-'+stem)||'null');}catch(e){return null;}}
+  var overall=0;
+  document.querySelectorAll('[data-track]').forEach(function(box){
+    box.dataset.track.split(',').forEach(function(i){
+      var g=C[+i]; if(!g) return; var s=sum(g.f.replace('.html','')); var pct=s&&s.total?Math.round(100*s.done/s.total):0; if(s) overall+=s.done;
+      var a=document.createElement('a'); a.className='card'; a.href=g.f;
+      a.innerHTML='<span class="n"><span>Guide '+(+i+1)+'</span><span>'+(s&&s.total?s.done+' / '+s.total:'')+'</span></span><h3></h3><p></p><span class="bar" aria-hidden="true"><i style="width:'+pct+'%"></i></span>';
+      a.querySelector('h3').textContent=g.t; a.querySelector('p').textContent=g.d; box.appendChild(a);
+    });
+  });
+  var o=document.querySelector('[data-overall]'); if(o) o.textContent=overall;
+  var tt=document.querySelector('[data-total]'); if(tt) tt.textContent=overall+' chapters complete';
+  /* placement */
+  var out=document.getElementById('place-out');
+  var boxes=document.querySelectorAll('#place input');
+  function upd(){
+    var first=-1; boxes.forEach(function(b){ if(first<0 && !b.checked) first=+b.dataset.skip; });
+    var g; if(first<0){ g={i:6}; } else g={i:first};
+    var guide=C[g.i]; if(!guide||!out) return;
+    var extra=first<0?' You already have the basics. Skim Guides 1–6 using their checklists, and spend your time on the practice and breakdowns.':(first===0?' It sets up the vocabulary every other guide uses.':' Skim the guides before it, using their self-assessment checklists to confirm.');
+    out.innerHTML='Start with <b><a href="'+guide.f+'">Guide '+(g.i+1)+' · '+guide.t+'</a></b>.'+extra;
+  }
+  boxes.forEach(function(b){b.addEventListener('change',upd);}); upd();
+})();
+</script>
+</body>
+</html>
