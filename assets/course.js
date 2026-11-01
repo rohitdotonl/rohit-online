@@ -64,6 +64,7 @@
         else { if(!open){h+='<ol>';open=true;} h+='<li'+(it.num?'':' class="plain"')+'><a href="#'+it.id+'" data-nav="'+it.id+'">'+(it.num?'<span class="n">'+esc(it.num)+'</span>':'')+'<span>'+esc(it.text)+'<span class="tick" data-tick="'+it.id+'"></span></span></a></li>'; }
       });
       if(open) h+='</ol>';
+      h+='<a class="home" style="margin:24px 0 0" href="https://github.com/rohitdotonl/rohit-online/archive/refs/heads/design-course.zip">↓ Download for offline</a>';
       h+='<div class="theme" role="group" aria-label="Theme"><button type="button" data-theme-set="auto">Auto</button><button type="button" data-theme-set="light">Light</button><button type="button" data-theme-set="dark">Dark</button></div>';
       rail.innerHTML=h;
     }
